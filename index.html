@@ -1,21 +1,642 @@
-<!doctype html><html lang='fr'><head><meta charset='utf-8'><title>Dossier — Ailes de Liberté</title><style>
-body{font-family:sans-serif;background:#f7f7f8;padding:40px}
-.page{max-width:900px;margin:0 auto;background:#fff;padding:30px;border:1px solid #e5e7eb;border-radius:10px;box-shadow:0 2px 5px rgba(0,0,0,0.05)}
-h1{color:#111827;border-bottom:2px solid #eee;padding-bottom:10px}
-.btn{display:inline-block;padding:8px 15px;background:#2b2f36;color:#fff;text-decoration:none;border-radius:6px;font-size:13px;font-weight:bold}
-.btn:hover{background:#000}
-table{width:100%;border-collapse:collapse;margin-top:20px}
-td{padding:12px;border-bottom:1px solid #eee;color:#374151}
-tr:hover{background:#f9fafb}
-</style></head><body><div class='page'>
-<h1>Portail de transmission — Ailes de Liberté</h1>
-<table>
-  <tr><td>00. Bordereau de transmission</td><td><a class='btn' href='00_Bordereau_Transmission_19pieces.pdf'>Télécharger</a></td></tr>
-  <tr><td>01. Note au Cabinet du Ministre</td><td><a class='btn' href='01_PieceA_Note_au_Cabinet_Ministre.pdf'>Télécharger</a></td></tr>
-  <tr><td>02. Note Stratégique DMCA</td><td><a class='btn' href='02_PieceB_Note_Strategique_DMCA.pdf'>Télécharger</a></td></tr>
-  <tr><td>03. Lettre de Saisine Formelle</td><td><a class='btn' href='03_PieceC_Lettre_Saisine_Formelle.pdf'>Télécharger</a></td></tr>
-  <tr><td>04. Attestation DICoD</td><td><a class='btn' href='04_ДодатокA_Атестаційний_депо_DICoD.pdf'>Télécharger</a></td></tr>
-  <tr><td>05. Lettre Matignon</td><td><a class='btn' href='05_AnnexeB_Lettre_Matignon_Interpretation.pdf'>Télécharger</a></td></tr>
-</table>
-<p style='margin-top:20px; font-size:12px; color:gray;'>Cliquer sur "Télécharger" pour ouvrir le document PDF.</p>
-</div></body></html>
+<!doctype html><html lang='fr'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><meta name='robots' content='noindex,nofollow'><title>Dossier institutionnel — Ailes de Liberté : France 1940 (MINARM — DMCA/SHD)</title><style>
+:root{
+  --ink:#111827;
+  --muted:#4b5563;
+  --line:#e5e7eb;
+  --bg:#ffffff;
+  --paper:#f7f7f8;
+  --btn:#2b2f36;
+  --btnH:#1f2329;
+  --btnT:#ffffff;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  color:var(--ink); background:var(--paper); line-height:1.35;
+}
+a{color:inherit}
+main{max-width:1040px;margin:24px auto;padding:0 18px}
+.card{background:var(--bg); border:1px solid var(--line); border-radius:14px; box-shadow:0 1px 0 rgba(0,0,0,.03)}
+.block{padding:18px 18px}
+.hrow{display:flex; gap:18px; align-items:flex-start; justify-content:space-between}
+.kv{display:grid; grid-template-columns:140px 1fr; gap:8px 14px; font-size:13px}
+.k{color:var(--muted); letter-spacing:.02em; text-transform:uppercase; font-size:11px}
+.badge{display:inline-block; padding:4px 8px; border:1px solid var(--line); border-radius:999px; font-size:12px; background:#fafafa}
+.title{font-size:18px; font-weight:650; margin:0 0 6px}
+.sub{color:var(--muted); font-size:13px; margin:0}
+hr{border:0; border-top:1px solid var(--line); margin:0}
+.toc{padding:14px 18px}
+.toc h3{margin:0 0 8px; font-size:14px}
+.toc ol{margin:0; padding-left:18px; columns:2; column-gap:28px}
+.toc a{color:#1f2937; text-decoration:underline; font-size:13px}
+.section{margin-top:16px}
+.sect-head{display:flex; align-items:baseline; justify-content:space-between; gap:12px; padding:16px 18px 12px}
+.sect-head h2{margin:0; font-size:16px}
+.sect-head .hint{margin:0; color:var(--muted); font-size:12px}
+.note{background:#fafafa;border:1px solid var(--line); border-radius:12px; padding:12px 14px; font-size:13px; color:#1f2937}
+.table{width:100%; border-collapse:separate; border-spacing:0; font-size:13px}
+.table th,.table td{padding:10px 10px; border-top:1px solid var(--line); vertical-align:top}
+.table thead th{background:#f3f4f6; color:#111827; font-size:11px; letter-spacing:.02em; text-transform:uppercase; border-top:0}
+.table tbody tr:first-child td{border-top:1px solid var(--line)}
+.table td strong{font-weight:650}
+.small{font-size:12px;color:var(--muted)}
+.piece{display:inline-block; padding:3px 8px; border:1px solid var(--line); border-radius:10px; background:#fff; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:12px}
+.btn{display:inline-block; padding:8px 12px; border-radius:10px; background:var(--btn); color:var(--btnT); text-decoration:none; font-size:12px; border:1px solid #111827}
+.btn:hover{background:var(--btnH)}
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:12px; padding:0 18px 18px}
+.phase{border:1px solid var(--line); border-radius:12px; background:#fff; padding:12px 14px}
+.phase h4{margin:0 0 8px; font-size:12px; letter-spacing:.02em; text-transform:uppercase}
+.phase ul{margin:0; padding-left:16px; font-size:13px}
+.footer{padding:14px 18px; color:var(--muted); font-size:12px}
+@media (max-width:860px){
+  .toc ol{columns:1}
+  .grid2{grid-template-columns:1fr}
+  .kv{grid-template-columns:120px 1fr}
+}
+.page-footer{margin:18px 0 6px; text-align:center; font-size:11px; color:var(--muted)}
+</style></head><body><main>
+
+<!-- HEADER -->
+<section class='card'>
+  <div class='block hrow'>
+    <div>
+      <p class='title'>Portail de transmission — dossier de qualification (information / instruction interne) — Programme « Ailes de Liberté : France 1940 »</p>
+      <p class='sub'>Dossier documentaire à usage interne (MINARM — DMCA/SHD). Diffusion restreinte. Support informatif — sans valeur décisionnelle.</p>
+      <div style='margin-top:10px' class='kv'>
+        <div class='k'>Objet</div><div>Programme mémoriel &amp; patrimonial — séquence 2026 (France/Europe/Royaume-Uni) — consolidation documentaire.</div>
+        <div class='k'>Référence</div><div><span class='badge'>Dossier</span> <span class='piece'>WOL-2026-FR-001</span> — <span class='badge'>Réf. interne</span> <span class='piece'>CAB/WOL/2026/001</span> — <span class='badge'>Réf. MINARM (routing)</span> <span class='piece'>MINARM/DMCA/SHD/2026/WOL</span></div>
+        <div class='k'>Destinataire</div><div>Ministère des Armées (FR) — services compétents (DMCA / SHD) — usage interne</div>
+        <div class='k'>Statut</div><div>Support documentaire transmis à titre informatif. Ne constitue ni décision, ni autorisation, ni engagement.</div>
+        <div class='k'>Date</div><div>2026</div>
+      </div>
+      <p class='small' style='margin:10px 0 0'>Transmission : à titre informatif. Aucune sollicitation financière. Aucune charge budgétaire. Aucune mobilisation opérationnelle.</p>
+    </div>
+    <div style='min-width:240px'>
+      <div class='card' style='border-radius:12px'>
+        <div class='block' style='padding:14px'>
+          <div style='font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase'>WINGS OF LIBERTY</div>
+          <div class='small'>International Aviation Heritage<br>&amp; Memory Consortium</div>
+          <div style='height:10px'></div>
+          <div class='small'><span class='k' style='text-transform:none;font-size:11px'>Date d’édition :</span> <span class='piece'>24.02.2026</span></div>
+          <div class='small'><span class='k' style='text-transform:none;font-size:11px'>Coordination :</span> Wings of Liberty Consortium</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- TOC -->
+  <div class='toc'>
+    <h3>Sommaire</h3>
+    <ol>
+      <li><a href='#s1'>Résumé exécutif</a></li>
+      <li><a href='#s2'>I. Note de contexte</a></li>
+      <li><a href='#s3'>II. Garanties administratives</a></li>
+      <li><a href='#s4'>III. Périmètre &amp; exclusions</a></li>
+      <li><a href='#s5'>IV. Validation institutionnelle française</a></li>
+      <li><a href='#s6'>IV bis. Feuille de route prévisionnelle 2026</a></li>
+      <li><a href='#s7'>V. Registre des soutiens — France</a></li>
+      <li><a href='#s8'>VI. Correspondances — Royaume-Uni</a></li>
+      <li><a href='#s9'>VI bis. Dimension européenne</a></li>
+      <li><a href='#s10'>VII. Soutiens institutionnels — Ukraine</a></li>
+      <li><a href='#s11'>VIII. Bordereau des pièces</a></li>
+      <li><a href='#s12'>IX. Registre des interlocuteurs (France)</a></li>
+      <li><a href='#s13'>X. Journal de transmission (audit trail)</a></li>
+      <li><a href='#s14'>XI. Annexes</a></li>
+      <li><a href='#s15'>XII. Mentions finales</a></li>
+    </ol>
+  </div>
+</section>
+
+<!-- SECTION 1 -->
+<section id='s1' class='section card'>
+  <div class='sect-head'>
+    <h2>Résumé exécutif</h2>
+    <p class='hint'>Synthèse — éléments strictement descriptifs</p>
+  </div>
+  <div class='block'>
+    <div class='note'>
+      Dossier transmis à titre informatif aux services compétents du Ministère des Armées (DMCA/SHD).
+      Il regroupe : correspondances officielles, accusés de réception, offres de partenariat, pièces justificatives (PDF),
+      et une feuille de route indicative 2026 (dates conditionnées à l’examen administratif).
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 -->
+<section id='s2' class='section card'>
+  <div class='sect-head'><h2>I. Note de contexte</h2><p class='hint'>Cadre général — mémoire &amp; patrimoine</p></div>
+  <div class='block'>
+    <p class='small' style='margin-top:0'>
+      Programme « Ailes de Liberté : France 1940 » — coopération patrimoniale et mémorielle, articulée autour d’une séquence 2026,
+      avec documentation consolidée et correspondances officielles (France / Royaume-Uni / Ukraine / Europe).
+    </p>
+  </div>
+</section>
+
+<!-- SECTION 3 -->
+<section id='s3' class='section card'>
+  <div class='sect-head'><h2>II. Garanties administratives</h2><p class='hint'>Neutralité — absence de sollicitation</p></div>
+  <div class='block'>
+    <div class='note'>
+      Rappel : ces éléments constituent des étapes de transmission administrative, sans valeur décisionnelle.
+      Aucune validation de fond n’est présumée. Aucune demande de validation n’est formulée dans ce portail.
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 -->
+<section id='s4' class='section card'>
+  <div class='sect-head'><h2>III. Périmètre &amp; exclusions</h2><p class='hint'>Délimitations — conformité</p></div>
+  <div class='block'>
+    <ul style='margin:0;padding-left:18px;font-size:13px'>
+      <li>Documents descriptifs et justificatifs uniquement (courriers, accusés, offres, pièces).</li>
+      <li>Aucune annonce publique, aucun engagement de communication institutionnelle présumé.</li>
+      <li>Toute date indiquée demeure conditionnée à l’examen administratif.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- SECTION 5 -->
+<section id='s5' class='section card'>
+  <div class='sect-head'><h2>IV. Validation institutionnelle française</h2><p class='hint'>Routing — Matignon → MINARM</p></div>
+  <div class='block'>
+    <div class='grid2' style='padding-top:0'>
+      <div class='phase'>
+        <h4>Transmission Matignon</h4>
+        <ul>
+          <li>Cabinet du Premier ministre — transmission officielle vers MINARM (examen prescrit).</li>
+          <li>Réf. : <span class='piece'>CAB/2026A/2218-AFT</span> (lettre reçue).</li>
+        </ul>
+      </div>
+      <div class='phase'>
+        <h4>Dépôt / Enregistrement</h4>
+        <ul>
+          <li>DICoD / MINARM — enregistrement via formulaire officiel.</li>
+          <li>Réf. MINARM : <span class='piece'>n°29038088</span> (accusé de réception).</li>
+        </ul>
+      </div>
+    </div>
+    <div class='note'>
+      Procédure : transmission administrative — aucune décision présumée. Instruction en cours auprès des services compétents.
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6 -->
+<section id='s6' class='section card'>
+  <div class='sect-head'><h2>IV bis. Feuille de route prévisionnelle 2026</h2><p class='hint'>Indicative — sous réserve d’examen administratif</p></div>
+  <div class='block'>
+    <p class='small' style='margin-top:0'>Feuille de route indicative — scénarios opérationnels à confirmer. Toute date demeure conditionnée à validation administrative.</p>
+  </div>
+  <div class='grid2'>
+    <div class='phase'>
+      <h4>Phase 1 — Janvier → Avril 2026 (instruction administrative)</h4>
+      <ul>
+        <li>Dépôt DICoD — n° <span class='piece'>29038088</span> (29.01.2026)</li>
+        <li>Transmission Matignon → MINARM (<span class='piece'>CAB/2026A/2218-AFT</span>)</li>
+        <li>Examen DMCA / SHD — en cours</li>
+        <li>Clarifications archivistiques SHD / TsDAVO</li>
+      </ul>
+    </div>
+    <div class='phase'>
+      <h4>Phase 2 — Mai → Juin 2026 (coordination mémorielle)</h4>
+      <ul>
+        <li>SHD — vérification archivistique fonds FFI</li>
+        <li>Contacts parlementaires (Commission Défense AN / Sénat)</li>
+        <li>Coordination Ambassade d’Ukraine en France</li>
+        <li>Validation scientifique préliminaire</li>
+      </ul>
+    </div>
+    <div class='phase'>
+      <h4>Phase 3 — Juin → Août 2026 (préparation muséographique)</h4>
+      <ul>
+        <li>6 juin — Sainte-Mère-Église</li>
+        <li>18 juin — Appel du 18 Juin (Paris)</li>
+        <li>Toulouse — ISAE-SUPAERO, Stage III (FR-05) — août 2026</li>
+        <li>Préparation artefacts — coordination partenaires (KhAI)</li>
+      </ul>
+    </div>
+    <div class='phase'>
+      <h4>Phase 4 — Septembre → Octobre 2026 (séquence mémorielle)</h4>
+      <ul>
+        <li>15 sept — V&amp;A Museum London (invitation officielle)</li>
+        <li>19–21 oct — Strasbourg — Parlement européen (dépôt patronage : procédure)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7 -->
+<section id='s7' class='section card'>
+  <div class='sect-head'><h2>V. Registre des soutiens — France</h2><p class='hint'>Correspondances officielles — statuts descriptifs</p></div>
+  <div class='block'>
+    <div class='note'><strong>Règle de lecture :</strong> statuts descriptifs uniquement. Traductions FR : traductions de travail à usage documentaire (non opposables).</div>
+  </div>
+  <div class='block' style='padding-top:0'>
+    <table class='table'>
+      <thead><tr>
+        <th>Institution</th><th>Signataire / service</th><th>Date</th><th>Nature</th><th>Réf.</th><th>Statut</th><th>Pièce</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Cabinet du Premier ministre</strong></td>
+          <td>Paul-Hugo VERDIN, Chef de cabinet</td>
+          <td>11.02.2026</td>
+          <td>Transmission vers MINARM — examen prescrit</td>
+          <td><span class='piece'>CAB/2026A/2218-AFT</span></td>
+          <td>Lettre reçue</td>
+          <td><span class='piece'>PIÈCE-05</span></td>
+        </tr>
+        <tr>
+          <td><strong>Mairie de Toulouse</strong></td>
+          <td>Jean-Luc MOUDENC — via J.-C. DARDELET (Adjoint)</td>
+          <td>12.02.2026</td>
+          <td>Proposition partenariat institutionnel — entretien Cabinet du Maire proposé</td>
+          <td><span class='piece'>JLM/NC/26 003 239-b</span></td>
+          <td>Lettre reçue</td>
+          <td><span class='piece'>PIÈCE-13</span></td>
+        </tr>
+        <tr>
+          <td><strong>Sénat — Commission de la défense</strong></td>
+          <td>Cédric PERRIN, Président</td>
+          <td>Janv. 2026</td>
+          <td>Accusé de réception — intérêt institutionnel exprimé — Commission Défense</td>
+          <td><span class='piece'>FR-03</span></td>
+          <td>Accusé de réception</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>Assemblée Nationale — Commission Défense</strong></td>
+          <td>Jean-Michel JACQUES, Président</td>
+          <td>Janv. 2026</td>
+          <td>Accusé de réception — intérêt institutionnel exprimé</td>
+          <td><span class='piece'>FR-04</span></td>
+          <td>Accusé de réception</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>ISAE-SUPAERO Toulouse</strong></td>
+          <td>Marie-Hélène BAROUX, Direction des partenariats</td>
+          <td>Fév. 2026</td>
+          <td>Partenariat académique — séminaire KhAI × ISAE — Stage III, Août 2026</td>
+          <td><span class='piece'>FR-05</span></td>
+          <td>Partenariat confirmé</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>Région Grand Est — Direction de la Culture</strong></td>
+          <td>Frédérique NEAU-DUFOUR</td>
+          <td>12.02.2026</td>
+          <td>Proposition de visioconférence — intérêt institutionnel exprimé</td>
+          <td><span class='piece'>FR-GE-01</span></td>
+          <td>Intérêt institutionnel exprimé</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>Ville de Paris — Direction Culture &amp; Patrimoine</strong></td>
+          <td>Mairie centrale + 7e + 16e arr.</td>
+          <td>Jan.–Fév. 2026</td>
+          <td>Enregistrement administratif — arrondissements concernés</td>
+          <td>
+            <span class='piece'>SLC260130349522</span><br>
+            <span class='piece'>SLC260130092461</span><br>
+            <span class='piece'>SLC260204226797</span>
+          </td>
+          <td>Accusé de réception</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>Région Bretagne</strong></td>
+          <td>Contact régional</td>
+          <td>30.01.2026</td>
+          <td>Demande transmise — service concerné saisi</td>
+          <td><span class='piece'>FR-RB-01</span></td>
+          <td>Accusé de réception</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>Parlement européen — Unité Ask EP</strong></td>
+          <td>Bureau de Paris</td>
+          <td>06.02.2026</td>
+          <td>Réponse administrative — procédure de demande de patronage; critères et délais communiqués. Aucun engagement institutionnel.</td>
+          <td><span class='piece'>EP-ASK-2026-01</span></td>
+          <td>Information reçue</td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- SECTION 8 -->
+<section id='s8' class='section card'>
+  <div class='sect-head'><h2>VI. Correspondances — Royaume-Uni</h2><p class='hint'>Correspondances officielles — statuts descriptifs</p></div>
+  <div class='block' style='padding-top:0'>
+    <table class='table'>
+      <thead><tr>
+        <th>Institution</th><th>Signataire</th><th>Date</th><th>Nature</th><th>Réf.</th><th>Statut</th><th>Pièce</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Department for Culture, Media and Sport (DCMS)</strong></td>
+          <td>Ministerial Support Team</td>
+          <td>15.10.2025</td>
+          <td>Réponse administrative — éléments de contexte patrimoine ukrainien + réorientation</td>
+          <td><span class='piece'>TO2025/07895/MR</span></td>
+          <td>Réponse reçue</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>Victoria and Albert Museum (V&amp;A)</strong></td>
+          <td>Evgeniya RAVTSOVA, International Programmes Mgr</td>
+          <td>03.02.2026</td>
+          <td>Invitation à intervenir — conférence « Ukrainian Heritage and UK Institutions », V&amp;A South Kensington, 15.09.2026</td>
+          <td><span class='piece'>199/2.02-41/10424/50</span></td>
+          <td>Invitation officielle</td>
+          <td><span class='piece'>PIÈCE-09</span></td>
+        </tr>
+        <tr>
+          <td><strong>Greater London Authority (GLA) — Culture Team</strong></td>
+          <td>Jo BAXENDALE</td>
+          <td>Déc. 2025</td>
+          <td>Soutien communicationnel — Culture Newsletter + plateformes sociales GLA. Activation sous réserve confirmation dates finales.</td>
+          <td><span class='piece'>UK-02</span><br><span class='piece'>MGLA060825-1740</span></td>
+          <td>Soutien communicationnel conditionnel</td>
+          <td><span class='piece'>PIÈCE-17</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- SECTION 9 -->
+<section id='s9' class='section card'>
+  <div class='sect-head'><h2>VI bis. Dimension européenne</h2><p class='hint'>Correspondances procédurales — aucun engagement présumé</p></div>
+  <div class='block'>
+    <div class='note'>
+      Dimension européenne : échanges de procédure (patronage / programmes), sans soutien institutionnel formalisé à ce stade.
+      Documents justificatifs disponibles sur demande.
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 10 -->
+<section id='s10' class='section card'>
+  <div class='sect-head'><h2>VII. Soutiens institutionnels — Ukraine</h2><p class='hint'>Correspondances officielles — soutien d’État d’origine documenté</p></div>
+  <div class='block' style='padding-top:0'>
+    <table class='table'>
+      <thead><tr>
+        <th>Institution</th><th>Interlocuteur</th><th>Date</th><th>Nature</th><th>Réf.</th><th>Statut</th><th>Pièce</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Міністерство оборони України — DIDC</strong></td>
+          <td>Гліб КАНЕВСЬКИЙ, міжнародне співробітництво</td>
+          <td>Березень 2026</td>
+          <td>Спеціальний лист FR — позначення 3 досвідчених пілотів. Non-paper в очікуванні фінального підписання.</td>
+          <td><span class='piece'>UA-01</span></td>
+          <td>Інституційна підтримка — очікується підписання</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>Посольство України у Франції</strong></td>
+          <td>Військовий аташе</td>
+          <td>Березень 2026</td>
+          <td>Канал двосторонньої координації МО Франція ↔ Україна — нота координації FR/2026/DIDC-022</td>
+          <td><span class='piece'>UA-02</span><br><span class='piece'>UA-03</span></td>
+          <td>Активна двостороння координація</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>Державна архівна служба України</strong></td>
+          <td>Службова відповідь (кореспонденція)</td>
+          <td>2025</td>
+          <td>Підтвердження співпраці / доступу до фондів (державні архіви)</td>
+          <td><span class='piece'>—</span></td>
+          <td>Інституційна підтримка підтверджена</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>ЦДАВО України</strong></td>
+          <td>Керівництво / профільний відділ</td>
+          <td>2025</td>
+          <td>Корпус документів (FFI/WWII) — підтвердження наявності матеріалів</td>
+          <td><span class='piece'>—</span></td>
+          <td>Інституційна підтримка підтверджена</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>Харківський авіаційний інститут (KhAI)</strong></td>
+          <td>Адміністрація / міжнародні зв’язки</td>
+          <td>2025–2026</td>
+          <td>Академічна участь — координація семінару KhAI × ISAE</td>
+          <td><span class='piece'>—</span></td>
+          <td>Партнерство підтверджене</td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- SECTION 11 -->
+<section id='s11' class='section card'>
+  <div class='sect-head'><h2>VIII. Bordereau des pièces (documents officiels)</h2><p class='hint'>Registre des pièces — disponibilité ≠ demande</p></div>
+  <div class='block'>
+    <div class='note'>
+      <strong>Clause de neutralité (pièces)</strong><br>
+      La présence d’un lien de consultation (PDF) signifie uniquement « pièce disponible ». Elle ne vaut ni sollicitation, ni engagement, ni demande de validation.
+    </div>
+  </div>
+  <div class='block' style='padding-top:0'>
+    <table class='table'>
+      <thead><tr>
+        <th>Pièce</th><th>Nature</th><th>Intitulé</th><th>Date</th><th>Lang.</th><th>Émetteur</th><th>Statut</th><th>Accès</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><span class='piece'>PIÈCE-13</span></td>
+          <td>Courrier officiel</td>
+          <td>Lettre de la Mairie de Toulouse — partenariat institutionnel « Ailes de Liberté : France 1940 »</td>
+          <td>12.02.2026</td>
+          <td>FR</td>
+          <td>Mairie de Toulouse</td>
+          <td>Lettre reçue</td>
+          <td><a class='btn' href='#' onclick="alert('PDF à intégrer (PIÈCE-13)');return false;">Télécharger</a><div class='small'>PDF — FR</div></td>
+        </tr>
+        <tr>
+          <td><span class='piece'>PIÈCE-05</span></td>
+          <td>Courrier officiel</td>
+          <td>Lettre Matignon — transmission vers MINARM (examen prescrit)</td>
+          <td>11.02.2026</td>
+          <td>FR</td>
+          <td>Cabinet du Premier ministre</td>
+          <td>Lettre reçue</td>
+          <td><a class='btn' href='#' onclick="alert('PDF à intégrer (PIÈCE-05)');return false;">Télécharger</a><div class='small'>PDF — FR</div></td>
+        </tr>
+        <tr>
+          <td><span class='piece'>PIÈCE-09</span></td>
+          <td>Invitation officielle</td>
+          <td>Invitation V&amp;A — conférence « Ukrainian Heritage and UK Institutions » (15.09.2026)</td>
+          <td>03.02.2026</td>
+          <td>EN</td>
+          <td>Victoria and Albert Museum</td>
+          <td>Invitation officielle</td>
+          <td><a class='btn' href='#' onclick="alert('PDF à intégrer (PIÈCE-09)');return false;">Télécharger</a><div class='small'>PDF — EN</div></td>
+        </tr>
+        <tr>
+          <td><span class='piece'>PIÈCE-17</span></td>
+          <td>Note de clarification</td>
+          <td>Périmètre exact du soutien GLA — rectification formulation initiale</td>
+          <td>Déc. 2025</td>
+          <td>EN/FR</td>
+          <td>GLA Culture Team</td>
+          <td>Lettre reçue</td>
+          <td><a class='btn' href='#' onclick="alert('PDF à intégrer (PIÈCE-17)');return false;">Télécharger</a><div class='small'>PDF — usage Cabinet</div></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class='small' style='margin:10px 0 0'>NB : pièces 14/15 non intégrées (en attente de réception). Remplacement des liens « Télécharger » dès disponibilité.</p>
+  </div>
+</section>
+
+<!-- SECTION 12 -->
+<section id='s12' class='section card'>
+  <div class='sect-head'><h2>IX. Registre des interlocuteurs (France)</h2><p class='hint'>Contacts institutionnels actifs et archivés — France</p></div>
+  <div class='block' style='padding-top:0'>
+    <table class='table'>
+      <thead><tr>
+        <th>Institution</th><th>Direction / service</th><th>Interlocuteur</th><th>Rôle (descriptif)</th><th>Dernier échange</th><th>Statut</th><th>Réf.</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Cabinet du Premier ministre</strong></td>
+          <td>Chef de cabinet</td>
+          <td>Paul-Hugo VERDIN</td>
+          <td>Transmission officielle vers MINARM</td>
+          <td>11.02.2026</td>
+          <td>Lettre reçue</td>
+          <td><span class='piece'>CAB/2026A/2218-AFT</span></td>
+        </tr>
+        <tr>
+          <td><strong>MINARM — Cabinet Ministre</strong></td>
+          <td>Cabinet de Mme Catherine VAUTRIN</td>
+          <td>À désigner</td>
+          <td>Examen prescrit par Matignon — en attente</td>
+          <td>Fév. 2026</td>
+          <td>En cours d’examen</td>
+          <td><span class='piece'>n°29038088</span></td>
+        </tr>
+        <tr>
+          <td><strong>DICoD — MINARM</strong></td>
+          <td>Service de communication</td>
+          <td>Service compétent</td>
+          <td>Enregistrement dossier via formulaire officiel</td>
+          <td>29.01.2026</td>
+          <td>Accusé de réception</td>
+          <td><span class='piece'>n°29038088</span></td>
+        </tr>
+        <tr>
+          <td><strong>Sénat — Commission Défense</strong></td>
+          <td>Commission des affaires étrangères, défense</td>
+          <td>Cédric PERRIN</td>
+          <td>Accusé réception — intérêt institutionnel</td>
+          <td>Janv. 2026</td>
+          <td>Accusé de réception</td>
+          <td><span class='piece'>FR-03</span></td>
+        </tr>
+        <tr>
+          <td><strong>Assemblée Nationale — Commission Défense</strong></td>
+          <td>Commission défense nationale</td>
+          <td>Jean-Michel JACQUES</td>
+          <td>Accusé réception — intérêt institutionnel</td>
+          <td>Janv. 2026</td>
+          <td>Accusé de réception</td>
+          <td><span class='piece'>FR-04</span></td>
+        </tr>
+        <tr>
+          <td><strong>Mairie de Toulouse</strong></td>
+          <td>Cabinet du Maire</td>
+          <td>Jean-Claude DARDELET</td>
+          <td>Entretien proposé — partenariat institutionnel</td>
+          <td>12.02.2026</td>
+          <td>Lettre reçue</td>
+          <td><span class='piece'>JLM/NC/26 003 239-b</span></td>
+        </tr>
+        <tr>
+          <td><strong>ISAE-SUPAERO</strong></td>
+          <td>Direction des partenariats</td>
+          <td>Marie-Hélène BAROUX</td>
+          <td>Séminaire KhAI × ISAE — Stage III Août 2026</td>
+          <td>Fév. 2026</td>
+          <td>Partenariat confirmé</td>
+          <td><span class='piece'>FR-05</span></td>
+        </tr>
+        <tr>
+          <td><strong>Région Grand Est</strong></td>
+          <td>Direction de la Culture et de la Mémoire</td>
+          <td>Frédérique NEAU-DUFOUR</td>
+          <td>Visioconférence proposée — intérêt Président de Région</td>
+          <td>12.02.2026</td>
+          <td>Intérêt institutionnel exprimé</td>
+          <td><span class='piece'>FR-GE-01</span></td>
+        </tr>
+        <tr>
+          <td><strong>Parlement européen — Ask EP</strong></td>
+          <td>Unité demandes citoyens</td>
+          <td>Bureau de Paris</td>
+          <td>Réponse procédurale — règles patronage communiquées</td>
+          <td>06.02.2026</td>
+          <td>Information reçue</td>
+          <td><span class='piece'>EP-ASK-2026-01</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- SECTION 13 -->
+<section id='s13' class='section card'>
+  <div class='sect-head'><h2>X. Journal de transmission (audit trail)</h2><p class='hint'>Chronologie des actions — sans valeur décisionnelle</p></div>
+  <div class='block'>
+    <div class='note'>
+      Journal interne : traces de transmission (routing), dépôts, accusés de réception, demandes complémentaires.
+      Les éléments détaillés sont disponibles sur demande.
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 14 -->
+<section id='s14' class='section card'>
+  <div class='sect-head'><h2>XI. Annexes</h2><p class='hint'>Pièces &amp; éléments complémentaires</p></div>
+  <div class='block'>
+    <p class='small' style='margin-top:0'>Annexes : pièces justificatives, scans, traductions de travail, notes internes.</p>
+  </div>
+</section>
+
+<!-- SECTION 15 -->
+<section id='s15' class='section card'>
+  <div class='sect-head'><h2>XII. Mentions finales</h2><p class='hint'>Point de contact administratif — neutralité</p></div>
+  <div class='block'>
+    <div class='note'>
+      <strong>Point de contact administratif</strong><br>
+      Consortium : Wings of Liberty — International Aviation Heritage and Memory Consortium<br><br>
+      Responsable dossier : Ihor BOLDIN, Président-fondateur<br>
+      Fondation : Culture.UA Charitable Foundation<br>
+      Email : info@cultureua.org<br>
+      Adresse : 49000 Ukraine, Dnipro, vul. Budivelnikiv, 23, bureau 312<br><br>
+      Canal : correspondance administrative uniquement.<br>
+      Accès réservé — transmission par courrier officiel.
+    </div>
+    <div class='note' style='margin-top:12px'>
+      <strong>Rappel — neutralité</strong><br>
+      Aucune demande de validation n’est formulée dans ce portail. Aucune pression, aucune anticipation de décision, aucun engagement financier.
+    </div>
+  </div>
+  <div class='footer'>Dossier WOL-2026-FR-001 — Transmission administrative — MINARM (DMCA/SHD)</div>
+</section>
+
+<div class='page-footer'>Dossier WOL-2026-FR-001 — Transmission administrative — MINARM (DMCA/SHD)</div></main></body></html>
